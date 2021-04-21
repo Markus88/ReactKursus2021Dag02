@@ -8,4 +8,5 @@ Hint: you can use display: inline-block and width attribute.
 .movie-list-item {
   display: inline-block;
   width: 300px;
+  padding: 10px;
 }
