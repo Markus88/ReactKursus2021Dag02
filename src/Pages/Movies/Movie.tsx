@@ -1,3 +1,5 @@
+import "./MovieList.css"
+
 export interface IMovieProps {
   title: string;
   posterUrl: string;

@@ -1,5 +1,6 @@
 import datasource from "../../Data/db.json";
 import Movie from "./Movie";
+import "./MovieList.css";
 
 export const MovieList = () => {
   return (

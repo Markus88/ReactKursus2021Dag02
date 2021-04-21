@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* // CSS HelloWorld.css file */
+.HelloWorld_div {
+ background-color: #fff;
+}
+/* // HelloWorld.tsx file
+const HelloWorld: React.FC = () => (
+  <div className="HelloWorld_div">Hello World</div>
+);
+const HelloWorld: React.FC = () => (
+  <div style={{ backgroundColor: "#fff"}}>Hello World</div>
+); */

@@ -1,0 +1,11 @@
+/* Assignment - Movie list styling
+1. Make your movie list to display the items side by side if space allows. The movie list item should be 300px wide.
+Hint: you can use display: inline-block and width attribute.
+   */
+
+/* className="movie-list" */
+
+.movie-list-item {
+  display: inline-block;
+  width: 300px;
+}
