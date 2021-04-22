@@ -37,10 +37,9 @@
   }
 }
 
-
 /* // CSS HelloWorld.css file */
 .HelloWorld_div {
- background-color: #fff;
+  background-color: #fff;
 }
 /* // HelloWorld.tsx file
 const HelloWorld: React.FC = () => (

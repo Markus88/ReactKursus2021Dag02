@@ -1,10 +1,14 @@
-import "./App.css";
+import "./Styling/App.css";
 import { MovieList } from "./Pages/Movies/MovieList";
+import { Route, Switch, Redirect } from "react-router";
 
 function App() {
   return (
     <div className="App">
-      <MovieList />
+      <Switch>
+        <Redirect exact from="/" to="/movies" />
+        <Route path="/movies" component={MovieList} />
+      </Switch>
     </div>
   );
 }

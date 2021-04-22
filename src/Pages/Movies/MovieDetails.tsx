@@ -1,4 +1,3 @@
-import datasource from "../../Data/db.json";
 import { IMovieProps } from "./Movie";
 
 export const MovieDetails = (movieInformation: IMovieProps) => {

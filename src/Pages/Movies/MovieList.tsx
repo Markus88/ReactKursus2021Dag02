@@ -4,9 +4,7 @@ import Movie from "./Movie";
 import "./Styling/MovieList.css";
 
 export const MovieList = () => {
-  const [selectedMovie, setSelectedMovie] = useState<number | undefined>(
-    undefined
-  );
+  const [, setSelectedMovie] = useState<number | undefined>(undefined);
 
   const metode = (id: number) => {
     setSelectedMovie(id);
@@ -27,6 +25,41 @@ export const MovieList = () => {
     </div>
   );
 };
+
+/*
+export interface Movie {
+    id: number
+    title: string
+    year: string
+    runtime: string
+    genres: string[]
+    director: string
+    actors: string
+    plot: string
+    posterUrl: string
+}
+
+interface MovieListProps extends RouteComponentProps {
+    movies: Movie[]
+}
+
+const MovieList = ({ movies, history, match }: MovieListProps) => {
+    return (
+        <div className="movie-list">
+            {
+                movies.map(movie => (
+                    <div className="movie-list-item" onClick={() => history.push(`${match.path}/${movie.id}`)}>
+                        <h2>{movie.title}</h2>
+                        <img src={movie.posterUrl} />
+                    </div>
+                ))
+            }
+        </div>
+    )
+}
+
+export { MovieList }
+*/
 
 // Assignment - Movie detail
 // 1. Add an onClick to your movie list item

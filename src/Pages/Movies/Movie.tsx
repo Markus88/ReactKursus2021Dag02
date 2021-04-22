@@ -14,10 +14,9 @@ export interface IMovieProps {
 }
 
 const Movie: React.FC<IMovieProps> = (props) => (
-  <div className="movie-list-item">
+  <div className="movie-list-item" onClick={() => props.onClick(props.id)}>
     <h2>{props.title}</h2>
     <img src={props.posterUrl} />
-    <button onClick={() => props.onClick(props.id)}>Info</button>
   </div>
 );
 export default Movie;
