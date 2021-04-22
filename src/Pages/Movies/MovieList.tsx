@@ -1,27 +1,44 @@
 import { useState } from "react";
 import datasource from "../../Data/db.json";
-import Movie from "./Movie";
+import Movie, { IMovieProps } from "./Movie";
+import MoviesRoute from "./MoviesRoute";
 import "./Styling/MovieList.css";
 
-export const MovieList = () => {
-  const [, setSelectedMovie] = useState<number | undefined>(undefined);
+// export const MovieList = () => {
+//   const [, setSelectedMovie] = useState<number | undefined>(undefined);
 
-  const metode = (id: number) => {
-    setSelectedMovie(id);
-  };
+//   const metode = (id: number) => {
+//     setSelectedMovie(id);
+//   };
 
+//   return (
+//     <div className="movie-list">
+//       {datasource.movies.map((movie) => (
+//         <Movie
+//           key={movie.id}
+//           id={movie.id}
+//           title={movie.title}
+//           posterUrl={movie.posterUrl}
+//           onClick={metode}
+//         />
+//       ))}
+//       ;
+//     </div>
+//   );
+// };
+// input parametrer forklaring: movies kommer fra IMovieProps, history og match kommer fra RouteComponentProps og bruges til Routes
+export const MovieList = ({ movies, history, match }: MoviesRoute) => {
   return (
     <div className="movie-list">
-      {datasource.movies.map((movie) => (
-        <Movie
-          key={movie.id}
-          id={movie.id}
-          title={movie.title}
-          posterUrl={movie.posterUrl}
-          onClick={metode}
-        />
+      {movies.map((movie) => (
+        <div
+          className="movie-list-item"
+          onClick={() => history.push(`${match.path}/${movie.id}`)}
+        >
+          <h2>{movie.title}</h2>
+          <img src={movie.posterUrl} />
+        </div>
       ))}
-      ;
     </div>
   );
 };
