@@ -1,3 +1,7 @@
+OBS! Patrick, husk altid at skriv.   npm install <-- når du har hentet koden ned. Det henter alt det nyeste.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
