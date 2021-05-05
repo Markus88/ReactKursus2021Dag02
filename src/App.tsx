@@ -50,6 +50,18 @@ function App() {
       <Content> */}
       <Switch>
         <Route strict={true} path="/movies" component={MovieRoutes} />
+
+        <Route
+          exact
+          path="/"
+          render={() => {
+            return true ? ( // Lad os bare lege, at dette er en authentication ting, og at brugeren er logget ind (true).
+              <Redirect to="/movies" />
+            ) : (
+              <Redirect to="/test1" />
+            );
+          }}
+        />
       </Switch>
       {/* </Content>
       <Footer>

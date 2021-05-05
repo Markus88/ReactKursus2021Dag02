@@ -1,6 +1,3 @@
-import { useState } from "react";
-import datasource from "../../Data/db.json";
-import Movie, { IMovieProps } from "./Movie";
 import MoviesRoute from "./MoviesRoute";
 import "./Styling/MovieList.css";
 
